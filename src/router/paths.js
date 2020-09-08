@@ -1,0 +1,21 @@
+export default [{
+    path: '/',
+    name: 'home',
+    view: 'Home'
+}, {
+    path: '/about',
+    name: 'About',
+    view: 'About'
+}, {
+    path: '/products',
+    name: 'Products',
+    view: 'Products'
+}, {
+    path: '/inventory',
+    name: 'Inventory',
+    view: 'Inventory'
+}, {
+    path: '/request',
+    name: 'Request',
+    view: 'Request'
+}, ]
