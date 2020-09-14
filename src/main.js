@@ -5,9 +5,11 @@ import store from './store'
 import vuetify from './plugins/vuetify';
 import Antd from "ant-design-vue";
 import 'ant-design-vue/dist/antd.css';
+// import notify from './notify'
 
 Vue.config.productionTip = false
 Vue.use(Antd)
+// notify.test()
 
 new Vue({
   router,

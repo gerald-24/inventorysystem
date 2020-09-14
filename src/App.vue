@@ -10,12 +10,16 @@
 
 <script>
 import NavigationBar from "./components/NavigationBar";
+import notify from "./notify";
 
 export default {
   name: "App",
 
   components: {
     NavigationBar
+  },
+  created() {
+    notify.test();
   },
 
   data: () => ({

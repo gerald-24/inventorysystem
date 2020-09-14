@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-list-item-group v-model="selectedCategory" color="primary">
+    <v-list-item-group v-model="category" color="primary">
       <v-list-item-title>Product Categories</v-list-item-title>
       <v-list-item v-for="(item, i) in Categories" :key="i">
         <v-list-item-icon>

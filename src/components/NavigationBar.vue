@@ -41,7 +41,6 @@
         <a-button shape="circle" type="primary" icon="logout" @click="logout()"></a-button>
       </a-tooltip>
     </v-toolbar>
-    {{current}}
     <a-menu v-model="current" mode="horizontal">
       <a-menu-item key="products" @click="routerPush('/products')">
         <a-icon type="ordered-list" />List of Supplies
@@ -53,13 +52,18 @@
         <a-icon type="pull-request" />Inventory
       </a-menu-item>
     </a-menu>
+    <a-modal v-model="visibleModify" width="1020px">
+      <modify-products></modify-products>
+    </a-modal>
   </div>
 </template>
 <script>
 import localdb from "../local/db";
+import modifyProducts from "./modifyProducts";
 export default {
   data() {
     return {
+      visibleModify: false,
       user: {},
       current: [],
       Department: "QA Department"
@@ -78,6 +82,7 @@ export default {
       console.log("Search");
     },
     showStore() {
+      this.visibleModify = true;
       console.log("showStore");
     },
     showCart() {
@@ -87,6 +92,9 @@ export default {
       console.log(toGo);
       this.$router.push(toGo);
     }
+  },
+  components: {
+    modifyProducts
   }
 };
 </script>
